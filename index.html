@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalope Dental - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, #06b6d4, #3b82f6);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .nav-link:hover {
+            color: #2563eb;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <!-- Navbar -->
+    <header class="bg-gradient-to-r from-cyan-500 to-blue-500 shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Left: Logo -->
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="text-white text-2xl font-bold tracking-tight">Kalope Dental</a>
+
+                    <!-- Core Navigation -->
+                    <div class="hidden md:flex items-center space-x-6 ml-4">
+                        <a href="#" class="nav-link text-white font-medium">Find Doctor</a>
+                        <a href="#" class="nav-link text-white font-medium">Video Consult</a>
+                        <a href="#" class="nav-link text-white font-medium">Surgeries</a>
+                        <a href="#" class="nav-link text-white font-medium">Dental Packages</a>
+                        <a href="#" class="nav-link text-white font-medium">Dental Products</a>
+                        <a href="#" class="nav-link text-white font-medium">Health Blog</a>
+                    </div>
+                </div>
+
+                <!-- Right: Auth Buttons -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#" class="nav-link text-white font-medium hover:text-blue-100">Login</a>
+                    <a href="#"
+                        class="bg-white text-blue-600 font-semibold px-4 py-2 rounded-xl hover:bg-blue-100 transition">Sign
+                        Up</a>
+                </div>
+
+                <!-- Mobile menu toggle -->
+                <div class="md:hidden">
+                    <button class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+        class="relative h-[90vh] bg-cover bg-center bg-no-repeat flex items-center justify-center text-white overflow-hidden"
+        style="background-image: url('./assest/hero-image.png');">
+        <!-- Animated Zoom Effect -->
+        <div class="absolute inset-0 transform scale-110 animate-[slowZoom_30s_infinite_alternate]"></div>
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-800/50 to-cyan-600/40 backdrop-blur-sm"></div>
+        <!-- Content -->
+        <div class="relative z-10 text-center px-4 max-w-2xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg mb-4">
+                Discover Trusted Dental Clinics Near You
+            </h1>
+            <p class="text-lg md:text-xl text-gray-100 mb-8 drop-shadow-md">
+                Compare hospitals, check services, and book appointments in one tap.
+            </p>
+
+            <!-- Search Bar -->
+            <div
+                class="bg-white/80 backdrop-blur-md rounded-xl shadow-xl p-4 flex flex-col md:flex-row items-center gap-4 md:gap-2 justify-between">
+
+                <!-- Location Input -->
+                <div class="flex items-center bg-white rounded-lg shadow-inner px-4 py-2 w-full md:w-auto">
+                    <svg class="w-5 h-5 text-gray-500 mr-2" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 11c1.656 0 3-1.343 3-3S13.656 5 12 5s-3 1.343-3 3 1.343 3 3 3zm0 0c-2.21 0-4 1.79-4 4v5h8v-5c0-2.21-1.79-4-4-4z" />
+                    </svg>
+                    <input type="text" placeholder="Enter Location"
+                        class="w-full md:w-40 text-gray-800 focus:outline-none" />
+                </div>
+
+                <!-- Search Input -->
+                <div class="flex items-center bg-white rounded-lg shadow-inner px-4 py-2 w-full md:w-auto">
+                    <svg class="w-5 h-5 text-gray-500 mr-2" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21 21l-4.35-4.35M10 17a7 7 0 100-14 7 7 0 000 14z" />
+                    </svg>
+                    <input type="text" placeholder="Search for clinics, doctors..."
+                        class="w-full md:w-72 text-gray-800 focus:outline-none" />
+                </div>
+
+                <!-- Button -->
+                <button
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition duration-300 shadow-md">
+                    Search
+                </button>
+            </div>
+        </div>
+
+        <style>
+            @keyframes slowZoom {
+                0% {
+                    transform: scale(1);
+                }
+
+                100% {
+                    transform: scale(1.1);
+                }
+            }
+        </style>
+    </section>
+    <section class="py-16 mt-20 bg-gray-50 box-border">
+        <div class="max-w-7xl mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">
+            Read top articles from health experts
+          </h2>
+      
+          <div class="relative flex items-center justify-center box-border">
+            <!-- Left Arrow -->
+            <button class="absolute left-0 md:-left-6 top-1/2 transform -translate-y-1/2 bg-blue-100 text-blue-600 hover:bg-blue-200 transition rounded-full shadow-lg p-2 z-10 border box-border">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+      
+            <!-- Cards Container -->
+            <div class="flex gap-6 overflow-x-auto scrollbar-hide justify-center w-full px-8 box-border">
+              <!-- Card 1 -->
+              <div class="min-w-[280px] max-w-xs bg-white rounded-lg shadow hover:shadow-md transition box-border border">
+                <img class="w-full h-48 object-cover rounded-t-lg" src="./assest/imunity-food.jpg" alt="Immunity Foods" />
+                <div class="p-4">
+                  <h3 class="text-lg font-semibold mb-1">5 Foods That Boost Immunity</h3>
+                  <p class="text-sm text-gray-500 mb-2">Ms. Swati Kapoor, Dietitian/Nutritionist</p>
+                  <p class="text-sm text-gray-600">750 Likes • 104336 Views</p>
+                </div>
+              </div>
+      
+              <!-- Card 2 -->
+              <div class="min-w-[280px] max-w-xs bg-white rounded-lg shadow hover:shadow-md transition box-border border">
+                <img class="w-full h-48 object-cover rounded-t-lg" src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=600&q=80" alt="Belly Fat Tips" />
+                <div class="p-4">
+                  <h3 class="text-lg font-semibold mb-1">16 Lifestyle Tips to Get Rid of Belly Fat</h3>
+                  <p class="text-sm text-gray-500 mb-2">Dr. Sachin Goel</p>
+                  <p class="text-sm text-gray-600">488 Likes • 116876 Views</p>
+                </div>
+              </div>
+      
+              <!-- Card 3 -->
+              <div class="min-w-[280px] max-w-xs bg-white rounded-lg shadow hover:shadow-md transition box-border border">
+                <img class="w-full h-48 object-cover rounded-t-lg" src="./assest/ghee-benefit.jpg" alt="Ghee Benefits" />
+                <div class="p-4">
+                  <h3 class="text-lg font-semibold mb-1">"Ghar Ka Ghee" Your Heart-Mate!</h3>
+                  <p class="text-sm text-gray-500 mb-2">Dr. Avinash Vilas Wankhede</p>
+                  <p class="text-sm text-gray-600">298 Likes • 62139 Views</p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Right Arrow -->
+            <button class="absolute right-0 md:-right-6 top-1/2 transform -translate-y-1/2 bg-blue-100 text-blue-600 hover:bg-blue-200 transition rounded-full shadow-lg p-2 z-10 border box-border">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+
+    <!-- Call to Action -->
+    <section class="bg-blue-600 text-white py-16 px-4 md:px-16">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to find your perfect dental clinic?</h2>
+            <p class="text-lg mb-6">Browse top-rated clinics and book appointments easily with Kalope Dental.</p>
+            <a href="/explore"
+                class="inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded-xl hover:bg-gray-100 transition">Explore
+                Clinics</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-blue-100 py-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h2 class="font-bold text-xl mb-4">Kalope Dental</h2>
+                <p>Your trusted platform for exploring dental care services and booking appointments with verified
+                    hospitals and clinics.</p>
+            </div>
+            <div>
+                <h3 class="font-semibold mb-2">Explore</h3>
+                <ul class="space-y-1">
+                    <li><a href="#" class="hover:underline">Find Clinics</a></li>
+                    <li><a href="#" class="hover:underline">Video Consult</a></li>
+                    <li><a href="#" class="hover:underline">Cities</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-semibold mb-2">Help</h3>
+                <ul class="space-y-1">
+                    <li><a href="#" class="hover:underline">FAQs</a></li>
+                    <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:underline">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-semibold mb-2">Contact</h3>
+                <p>Email: support@kalopedental.com</p>
+                <p>Phone: +91-98765-43210</p>
+            </div>
+        </div>
+        <div class="text-center mt-10 text-sm text-blue-200">&copy; 2025 Kalope Dental. All rights reserved.</div>
+    </footer>
+
+</body>
+
+</html>
