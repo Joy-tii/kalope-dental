@@ -2,216 +2,339 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kalope Dental - Home</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .nav-link {
-            position: relative;
-            transition: color 0.3s;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalope Dental - Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+   .bg-gradient-custom {
+    background: radial-gradient(
+        circle at 70% 50%,  /* bright spot at middle-right */
+        rgba(255, 255, 255, 0.18) 0%,
+        rgba(90, 120, 160, 0.3) 30%,
+        rgba(50, 80, 120, 0.5) 60%,
+        rgba(30, 50, 100, 0.7) 80%,
+        rgba(10, 20, 50, 0.9) 100%
+    );
+}
 
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -4px;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(to right, #06b6d4, #3b82f6);
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.3s ease;
-        }
 
-        .nav-link:hover::after {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
+    @keyframes slideDownFade {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
 
-        .nav-link:hover {
-            color: #2563eb;
-        }
-    </style>
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .navbar-animate {
+      animation: slideDownFade 0.6s ease-out forwards;
+    }
+
+    @keyframes slideUpFade {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-up {
+    animation: slideUpFade 0.6s ease-out forwards;
+  }
+
+  /* Hide scrollbar but still scrollable */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+    
+  </style>
 </head>
 
-<body class="bg-white text-gray-800">
+<body class="text-white">
+
+  <!-- Background Image Layer -->
+  <div class="absolute inset-0 w-full h-full">
+    <img src="./assest/hero-image.png" class="w-full h-full object-cover object-right z-0" />
+    <div class="absolute inset-0 bg-gradient-custom z-10"></div>
+  </div>
+
+  <!-- Foreground Content -->
+  <div class="relative z-20">
 
     <!-- Navbar -->
-    <header class="bg-gradient-to-r from-cyan-500 to-blue-500 shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Left: Logo -->
-                <div class="flex items-center space-x-6">
-                    <a href="#" class="text-white text-2xl font-bold tracking-tight">Kalope Dental</a>
+    <header class="bg-gradient-custom backdrop-blur-md flex items-center justify-between px-8 py-6 lg:py-8 w-full navbar-animate">
+      <h1 class="text-3xl font-bold">Kalope Dental</h1>
 
-                    <!-- Core Navigation -->
-                    <div class="hidden md:flex items-center space-x-6 ml-4">
-                        <a href="#" class="nav-link text-white font-medium">Find Doctor</a>
-                        <a href="#" class="nav-link text-white font-medium">Video Consult</a>
-                        <a href="#" class="nav-link text-white font-medium">Surgeries</a>
-                        <a href="#" class="nav-link text-white font-medium">Dental Packages</a>
-                        <a href="#" class="nav-link text-white font-medium">Dental Products</a>
-                        <a href="#" class="nav-link text-white font-medium">Health Blog</a>
-                    </div>
-                </div>
+      <nav class="hidden md:flex items-center space-x-4">
+        <a href="#" class="group relative inline-block px-4 py-2 font-semibold text-gray-700 transition duration-300 ease-in-out rounded-xl overflow-hidden hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+          <!-- Bottom border shine -->
+          <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-[2px] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full animate-pulse"></span>
+          
+          <!-- Hover background -->
+          <span class="absolute inset-0 bg-blue-50 scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out rounded-xl z-0"></span>
+          
+          <!-- Text with hover grow -->
+          <span class="relative z-10 group-hover:scale-105 group-hover:tracking-wide transition-all duration-300 ease-in-out">
+            Find Doctor
+          </span>
+        </a>
+      
+        <!-- Repeat for other links -->
+        <a href="#" class="group relative inline-block px-4 py-2 font-semibold text-gray-700 transition duration-300 ease-in-out rounded-xl overflow-hidden hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+          <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-[2px] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full animate-pulse"></span>
+          <span class="absolute inset-0 bg-blue-50 scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out rounded-xl z-0"></span>
+          <span class="relative z-10 group-hover:scale-105 group-hover:tracking-wide transition-all duration-300 ease-in-out">
+            Video Consult
+          </span>
+        </a>
+      
+        <!-- Add similar blocks for Surgeries, Packages, Products, Blog -->
+          <a href="#" class="group relative inline-block px-4 py-2 font-semibold text-gray-700 transition duration-300 ease-in-out rounded-xl overflow-hidden hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-[2px] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full animate-pulse"></span>
+        <span class="absolute inset-0 bg-blue-50 scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out rounded-xl z-0"></span>
+        <span class="relative z-10 group-hover:scale-105 group-hover:tracking-wide transition-all duration-300 ease-in-out">
+         Surgeries
+        </span>
+      </a>
+      
+      <a href="#" class="group relative inline-block px-4 py-2 font-semibold text-gray-700 transition duration-300 ease-in-out rounded-xl overflow-hidden hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-[2px] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full animate-pulse"></span>
+        <span class="absolute inset-0 bg-blue-50 scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out rounded-xl z-0"></span>
+        <span class="relative z-10 group-hover:scale-105 group-hover:tracking-wide transition-all duration-300 ease-in-out">
+          Packages
+        </span>
+      </a>
+      <a href="#" class="group relative inline-block px-4 py-2 font-semibold text-gray-700 transition duration-300 ease-in-out rounded-xl overflow-hidden hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-[2px] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full animate-pulse"></span>
+        <span class="absolute inset-0 bg-blue-50 scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out rounded-xl z-0"></span>
+        <span class="relative z-10 group-hover:scale-105 group-hover:tracking-wide transition-all duration-300 ease-in-out">
+          Products
+        </span>
+      </a>
+      
+      <a href="#" class="group relative inline-block px-4 py-2 font-semibold text-gray-700 transition duration-300 ease-in-out rounded-xl overflow-hidden hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-[2px] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full animate-pulse"></span>
+        <span class="absolute inset-0 bg-blue-50 scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out rounded-xl z-0"></span>
+        <span class="relative z-10 group-hover:scale-105 group-hover:tracking-wide transition-all duration-300 ease-in-out">
+         Blogs
+        </span>
+      </a>
+      </nav>
+     
+      </nav>
+      
+      
+    
+      <!-- Right Side Buttons -->
+      <div class="hidden md:flex items-center space-x-4 text-sm font-medium">
+        
+        <a href="#" class="group relative inline-block px-4 py-2 font-semibold text-blue-700 transition duration-300 ease-in-out rounded-xl overflow-hidden focus:outline-none focus:ring-2 focus:ring-blue-400">
 
-                <!-- Right: Auth Buttons -->
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="#" class="nav-link text-white font-medium hover:text-blue-100">Login</a>
-                    <a href="#"
-                        class="bg-white text-blue-600 font-semibold px-4 py-2 rounded-xl hover:bg-blue-100 transition">Sign
-                        Up</a>
-                </div>
-
-                <!-- Mobile menu toggle -->
-                <div class="md:hidden">
-                    <button class="text-white focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
+            <!-- Shimmer bar (active by default) -->
+            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-[2px] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full animate-pulse opacity-100 group-hover:opacity-0 transition-opacity duration-300"></span>
+          
+            <!-- Background filled by default, shrinks on hover -->
+            <span class="absolute inset-0 bg-blue-50 scale-100 group-hover:scale-0 transition-transform duration-300 ease-in-out rounded-xl z-0"></span>
+          
+            <!-- Text effect: bigger by default, resets on hover -->
+            <span class="relative z-10 scale-105 tracking-wide group-hover:scale-100 group-hover:tracking-normal transition-all duration-300 ease-in-out">
+              Login
+            </span>
+          </a>
+          
+        <a href="#" class="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-2 rounded-full shadow-md hover:scale-105 transition-all duration-300">
+          Sign Up
+        </a>
+      </div>
     </header>
-
-    <!-- Hero Section -->
-    <section
-        class="relative h-[90vh] bg-cover bg-center bg-no-repeat flex items-center justify-center text-white overflow-hidden"
-        style="background-image: url('./assest/hero-image.png');">
-        <!-- Animated Zoom Effect -->
-        <div class="absolute inset-0 transform scale-110 animate-[slowZoom_30s_infinite_alternate]"></div>
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-800/50 to-cyan-600/40 backdrop-blur-sm"></div>
-        <!-- Content -->
-        <div class="relative z-10 text-center px-4 max-w-2xl mx-auto">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg mb-4">
-                Discover Trusted Dental Clinics Near You
-            </h1>
-            <p class="text-lg md:text-xl text-gray-100 mb-8 drop-shadow-md">
-                Compare hospitals, check services, and book appointments in one tap.
-            </p>
-
-            <!-- Search Bar -->
-            <div
-                class="bg-white/80 backdrop-blur-md rounded-xl shadow-xl p-4 flex flex-col md:flex-row items-center gap-4 md:gap-2 justify-between">
-
-                <!-- Location Input -->
-                <div class="flex items-center bg-white rounded-lg shadow-inner px-4 py-2 w-full md:w-auto">
-                    <svg class="w-5 h-5 text-gray-500 mr-2" fill="none" stroke="currentColor" stroke-width="2"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M12 11c1.656 0 3-1.343 3-3S13.656 5 12 5s-3 1.343-3 3 1.343 3 3 3zm0 0c-2.21 0-4 1.79-4 4v5h8v-5c0-2.21-1.79-4-4-4z" />
-                    </svg>
-                    <input type="text" placeholder="Enter Location"
-                        class="w-full md:w-40 text-gray-800 focus:outline-none" />
-                </div>
-
-                <!-- Search Input -->
-                <div class="flex items-center bg-white rounded-lg shadow-inner px-4 py-2 w-full md:w-auto">
-                    <svg class="w-5 h-5 text-gray-500 mr-2" fill="none" stroke="currentColor" stroke-width="2"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M21 21l-4.35-4.35M10 17a7 7 0 100-14 7 7 0 000 14z" />
-                    </svg>
-                    <input type="text" placeholder="Search for clinics, doctors..."
-                        class="w-full md:w-72 text-gray-800 focus:outline-none" />
-                </div>
-
-                <!-- Button -->
-                <button
-                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition duration-300 shadow-md">
-                    Search
-                </button>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-start px-6 lg:px-16 py-10 text-white bg-cover bg-center" >
+    <!-- Content Wrapper -->
+    <div class="flex flex-col w-full max-w-5xl">
+      <!-- Top Text + Search -->
+      <div class="space-y-6">
+        <!-- Headline -->
+        <h2 class="text-4xl lg:text-5xl font-extrabold leading-tight drop-shadow-xl max-w-xl">
+          Discover Trusted Dental Clinics Near You
+        </h2>
+        <p class="text-lg text-gray-200 max-w-xl">
+          Compare hospitals, check services, and book appointments in one tap.
+        </p>
+  
+        <!-- Search Bar -->
+        <div class="space-y-4 sm:space-y-0 sm:flex sm:space-x-4">
+            <!-- Location Input -->
+            <div class="relative w-[150px] group">
+              <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 z-10 text-sm">📍</span>
+              <input
+                type="text"
+                placeholder="Location"
+                class="pl-8 w-full h-10 text-sm rounded-lg text-white bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-gray-300 transition duration-300 shadow-sm"
+              />
             </div>
+  
+          <!-- Keyword Input -->
+           <!-- Search Keyword Input -->
+  <div class="relative w-[220px] group">
+    <input
+      type="text"
+      placeholder="Search clinics..."
+      class="w-full h-10 text-sm px-3 rounded-lg text-white bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-gray-300 transition duration-300 shadow-sm"
+    />
+  </div>
+  
+          <!-- Search Button -->
+          <button class="group relative px-5 py-2 text-sm font-semibold text-white rounded-full shadow-md bg-gradient-to-r from-blue-500 to-blue-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400">
+            <span class="absolute inset-0 bg-white/10 scale-100 group-hover:scale-0 transition-transform duration-300 ease-in-out rounded-full z-0"></span>
+            <span class="relative z-10">Search</span>
+          </button>
         </div>
-
-        <style>
-            @keyframes slowZoom {
-                0% {
-                    transform: scale(1);
-                }
-
-                100% {
-                    transform: scale(1.1);
-                }
-            }
-        </style>
-    </section>
-    <section class="py-16 mt-20 bg-gray-50 box-border">
-        <div class="max-w-7xl mx-auto px-4">
-          <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">
-            Read top articles from health experts
-          </h2>
-      
-          <div class="relative flex items-center justify-center box-border">
-            <!-- Left Arrow -->
-            <button class="absolute left-0 md:-left-6 top-1/2 transform -translate-y-1/2 bg-blue-100 text-blue-600 hover:bg-blue-200 transition rounded-full shadow-lg p-2 z-10 border box-border">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-      
-            <!-- Cards Container -->
-            <div class="flex gap-6 overflow-x-auto scrollbar-hide justify-center w-full px-8 box-border">
-              <!-- Card 1 -->
-              <div class="min-w-[280px] max-w-xs bg-white rounded-lg shadow hover:shadow-md transition box-border border">
-                <img class="w-full h-48 object-cover rounded-t-lg" src="./assest/imunity-food.jpg" alt="Immunity Foods" />
-                <div class="p-4">
-                  <h3 class="text-lg font-semibold mb-1">5 Foods That Boost Immunity</h3>
-                  <p class="text-sm text-gray-500 mb-2">Ms. Swati Kapoor, Dietitian/Nutritionist</p>
-                  <p class="text-sm text-gray-600">750 Likes • 104336 Views</p>
-                </div>
-              </div>
-      
-              <!-- Card 2 -->
-              <div class="min-w-[280px] max-w-xs bg-white rounded-lg shadow hover:shadow-md transition box-border border">
-                <img class="w-full h-48 object-cover rounded-t-lg" src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=600&q=80" alt="Belly Fat Tips" />
-                <div class="p-4">
-                  <h3 class="text-lg font-semibold mb-1">16 Lifestyle Tips to Get Rid of Belly Fat</h3>
-                  <p class="text-sm text-gray-500 mb-2">Dr. Sachin Goel</p>
-                  <p class="text-sm text-gray-600">488 Likes • 116876 Views</p>
-                </div>
-              </div>
-      
-              <!-- Card 3 -->
-              <div class="min-w-[280px] max-w-xs bg-white rounded-lg shadow hover:shadow-md transition box-border border">
-                <img class="w-full h-48 object-cover rounded-t-lg" src="./assest/ghee-benefit.jpg" alt="Ghee Benefits" />
-                <div class="p-4">
-                  <h3 class="text-lg font-semibold mb-1">"Ghar Ka Ghee" Your Heart-Mate!</h3>
-                  <p class="text-sm text-gray-500 mb-2">Dr. Avinash Vilas Wankhede</p>
-                  <p class="text-sm text-gray-600">298 Likes • 62139 Views</p>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Right Arrow -->
-            <button class="absolute right-0 md:-right-6 top-1/2 transform -translate-y-1/2 bg-blue-100 text-blue-600 hover:bg-blue-200 transition rounded-full shadow-lg p-2 z-10 border box-border">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
+      </div>
+  
+      <!-- Cards Section -->
+      <div class="mt-10 flex gap-4 animate-slide-up">
+        <!-- Card 1 -->
+        <div class="w-24 h-20 p-2 border-l-4 border-blue-400 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer">
+          <div class="flex justify-center items-center mb-1">
+            <img src="./assest/stethoscope-solid.svg" alt="doctor" class="w-5 h-5" />
+          </div>
+          <p class="text-center text-xs font-medium">Consult</p>
+        </div>
+  
+        <!-- Card 2 -->
+        <div class="w-24 h-20 p-2 border-l-4 border-blue-400 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer">
+          <div class="flex justify-center items-center mb-1">
+            <img src="./assest/hospital-solid.svg" alt="medicine" class="w-5 h-5" />
+          </div>
+          <p class="text-center text-xs font-medium">Medicines</p>
+        </div>
+  
+        <!-- Card 3 -->
+        <div class="w-24 h-20 p-2 border-l-4 border-blue-400 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer">
+          <div class="flex justify-center items-center mb-1">
+            <img src="./assest/book-medical-solid.svg" alt="records" class="w-5 h-5" />
+          </div>
+          <p class="text-center text-xs font-medium">Records</p>
+        </div>
+  
+        <!-- Card 4 -->
+        <div class="w-24 h-20 p-2 border-l-4 border-blue-400 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer">
+          <div class="flex justify-center items-center mb-1">
+            <img src="./assest/bandage-solid.svg" alt="test" class="w-5 h-5" />
+          </div>
+          <p class="text-center text-xs font-medium">Book Test</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Top Articles Section -->
+<section class="py-20 bg-gradient-to-b from-blue-50 via-white to-blue-50 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-14 text-gray-800 drop-shadow-sm">
+        Read top articles from health experts
+      </h2>
+  
+      <!-- Arrow Left -->
+      <button
+        class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-blue-100 text-blue-600 hover:bg-blue-200 transition rounded-full shadow-lg p-2 z-10 border">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+  
+      <!-- Cards -->
+      <div class="flex gap-6 overflow-x-auto px-10 scrollbar-hide">
+        <!-- Card 1 -->
+        <div
+          class="min-w-[280px] max-w-xs bg-blue-50 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition rounded-xl relative group shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_10px_28px_rgba(37,99,235,0.45)] duration-300">
+          <img class="w-full h-40 object-cover rounded-t-xl" src="./assest/imunity-food.jpg" alt="Immunity Foods" />
+          <div class="p-4 space-y-1">
+            <h3 class="text-base font-semibold text-gray-800">5 Foods That Boost Immunity</h3>
+            <p class="text-sm text-gray-600">Ms. Swati Kapoor, Dietitian/Nutritionist</p>
+            <p class="text-xs text-gray-500">750 Likes • 104336 Views</p>
           </div>
         </div>
-      </section>
-      
-      
-      
-
-    <!-- Call to Action -->
-    <section class="bg-blue-600 text-white py-16 px-4 md:px-16">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-4">Ready to find your perfect dental clinic?</h2>
-            <p class="text-lg mb-6">Browse top-rated clinics and book appointments easily with Kalope Dental.</p>
-            <a href="/explore"
-                class="inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded-xl hover:bg-gray-100 transition">Explore
-                Clinics</a>
+  
+        <!-- Card 2 -->
+        <div
+          class="min-w-[280px] max-w-xs bg-blue-50 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition rounded-xl relative group shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_10px_28px_rgba(37,99,235,0.45)] duration-300">
+          <img class="w-full h-40 object-cover rounded-t-xl"
+            src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=600&q=80"
+            alt="Belly Fat Tips" />
+          <div class="p-4 space-y-1">
+            <h3 class="text-base font-semibold text-gray-800">16 Lifestyle Tips to Get Rid of Belly Fat</h3>
+            <p class="text-sm text-gray-600">Dr. Sachin Goel</p>
+            <p class="text-xs text-gray-500">488 Likes • 116876 Views</p>
+          </div>
         </div>
-    </section>
+  
+        <!-- Card 3 -->
+        <div
+          class="min-w-[280px] max-w-xs bg-blue-50 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition rounded-xl relative group shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_10px_28px_rgba(37,99,235,0.45)] duration-300">
+          <img class="w-full h-40 object-cover rounded-t-xl" src="./assest/ghee-benefit.jpg" alt="Ghee Benefits" />
+          <div class="p-4 space-y-1">
+            <h3 class="text-base font-semibold text-gray-800">"Ghar Ka Ghee" Your Heart-Mate!</h3>
+            <p class="text-sm text-gray-600">Dr. Avinash Vilas Wankhede</p>
+            <p class="text-xs text-gray-500">298 Likes • 62139 Views</p>
+          </div>
+        </div>
+  
+        <!-- Card 4 (extra) -->
+        <div
+          class="min-w-[280px] max-w-xs bg-blue-50 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition rounded-xl relative group shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_10px_28px_rgba(37,99,235,0.45)] duration-300">
+          <img class="w-full h-40 object-cover rounded-t-xl"
+            src="./assest/How to Naturally Stay Energetic Daily.jpeg" />
+          <div class="p-4 space-y-1">
+            <h3 class="text-base font-semibold text-gray-800">How to Naturally Stay Energetic Daily</h3>
+            <p class="text-sm text-gray-600">Dr. Anita Sharma</p>
+            <p class="text-xs text-gray-500">412 Likes • 90234 Views</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Arrow Right -->
+      <button
+        class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-blue-100 text-blue-600 hover:bg-blue-200 transition rounded-full shadow-lg p-2 z-10 border">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  </section>
+  
+ <!-- Call to Action -->
+<!-- Call to Action -->
+<section class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 text-white py-20 px-4">
+    <div class="max-w-5xl mx-auto text-center space-y-6">
+      <h2 class="text-3xl md:text-4xl font-bold drop-shadow-md">
+        Ready to find your perfect dental clinic?
+      </h2>
+      <p class="text-base md:text-lg text-blue-100">
+        Browse top-rated clinics and book appointments easily with Kalope Dental.
+      </p>
+      <a href="/explore"
+        class="inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded-xl hover:bg-gray-100 transition shadow-md hover:scale-105">
+        Explore Clinics
+      </a>
+    </div>
+  </section>
+  
+
+  
 
     <!-- Footer -->
     <footer class="bg-blue-800 text-blue-100 py-12">
