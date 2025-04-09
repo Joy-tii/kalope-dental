@@ -2,338 +2,385 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kalope Dental - Home</title>
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-   .bg-gradient-custom {
-    background: radial-gradient(
-        circle at 70% 50%,  /* bright spot at middle-right */
-        rgba(255, 255, 255, 0.18) 0%,
-        rgba(90, 120, 160, 0.3) 30%,
-        rgba(50, 80, 120, 0.5) 60%,
-        rgba(30, 50, 100, 0.7) 80%,
-        rgba(10, 20, 50, 0.9) 100%
-    );
-}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalope Dental - Home</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-gradient-custom {
+            background: radial-gradient(circle at 70% 50%,
+                    /* bright spot at middle-right */
+                    rgba(255, 255, 255, 0.18) 0%,
+                    rgba(90, 120, 160, 0.3) 30%,
+                    rgba(50, 80, 120, 0.5) 60%,
+                    rgba(30, 50, 100, 0.7) 80%,
+                    rgba(10, 20, 50, 0.9) 100%);
+        }
 
 
-    @keyframes slideDownFade {
-      0% {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
+        @keyframes slideDownFade {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
 
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    .navbar-animate {
-      animation: slideDownFade 0.6s ease-out forwards;
-    }
+        .navbar-animate {
+            animation: slideDownFade 0.6s ease-out forwards;
+        }
 
-    @keyframes slideUpFade {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+        @keyframes slideUpFade {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
 
-  .animate-slide-up {
-    animation: slideUpFade 0.6s ease-out forwards;
-  }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-  /* Hide scrollbar but still scrollable */
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
+        .animate-slide-up {
+            animation: slideUpFade 0.6s ease-out forwards;
+        }
 
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
+        /* Hide scrollbar but still scrollable */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
 
-    
-  </style>
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
 </head>
 
 <body class="text-white">
 
-  <!-- Background Image Layer -->
-  <div class="absolute inset-0 w-full h-full">
-    <img src="./assest/hero-image.png" class="w-full h-full object-cover object-right z-0" />
-    <div class="absolute inset-0 bg-gradient-custom z-10"></div>
-  </div>
-
-  <!-- Foreground Content -->
-  <div class="relative z-20">
-
-    <!-- Navbar -->
-    <header class="bg-gradient-custom backdrop-blur-md flex items-center justify-between px-8 py-6 lg:py-8 w-full navbar-animate">
-      <h1 class="text-3xl font-bold">Kalope Dental</h1>
-
-      <nav class="hidden md:flex items-center space-x-4">
-        <a href="#" class="group relative inline-block px-4 py-2 font-semibold text-gray-700 transition duration-300 ease-in-out rounded-xl overflow-hidden hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
-          <!-- Bottom border shine -->
-          <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-[2px] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full animate-pulse"></span>
-          
-          <!-- Hover background -->
-          <span class="absolute inset-0 bg-blue-50 scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out rounded-xl z-0"></span>
-          
-          <!-- Text with hover grow -->
-          <span class="relative z-10 group-hover:scale-105 group-hover:tracking-wide transition-all duration-300 ease-in-out">
-            Find Doctor
-          </span>
-        </a>
-      
-        <!-- Repeat for other links -->
-        <a href="#" class="group relative inline-block px-4 py-2 font-semibold text-gray-700 transition duration-300 ease-in-out rounded-xl overflow-hidden hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
-          <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-[2px] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full animate-pulse"></span>
-          <span class="absolute inset-0 bg-blue-50 scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out rounded-xl z-0"></span>
-          <span class="relative z-10 group-hover:scale-105 group-hover:tracking-wide transition-all duration-300 ease-in-out">
-            Video Consult
-          </span>
-        </a>
-      
-        <!-- Add similar blocks for Surgeries, Packages, Products, Blog -->
-          <a href="#" class="group relative inline-block px-4 py-2 font-semibold text-gray-700 transition duration-300 ease-in-out rounded-xl overflow-hidden hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
-        <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-[2px] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full animate-pulse"></span>
-        <span class="absolute inset-0 bg-blue-50 scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out rounded-xl z-0"></span>
-        <span class="relative z-10 group-hover:scale-105 group-hover:tracking-wide transition-all duration-300 ease-in-out">
-         Surgeries
-        </span>
-      </a>
-      
-      <a href="#" class="group relative inline-block px-4 py-2 font-semibold text-gray-700 transition duration-300 ease-in-out rounded-xl overflow-hidden hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
-        <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-[2px] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full animate-pulse"></span>
-        <span class="absolute inset-0 bg-blue-50 scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out rounded-xl z-0"></span>
-        <span class="relative z-10 group-hover:scale-105 group-hover:tracking-wide transition-all duration-300 ease-in-out">
-          Packages
-        </span>
-      </a>
-      <a href="#" class="group relative inline-block px-4 py-2 font-semibold text-gray-700 transition duration-300 ease-in-out rounded-xl overflow-hidden hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
-        <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-[2px] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full animate-pulse"></span>
-        <span class="absolute inset-0 bg-blue-50 scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out rounded-xl z-0"></span>
-        <span class="relative z-10 group-hover:scale-105 group-hover:tracking-wide transition-all duration-300 ease-in-out">
-          Products
-        </span>
-      </a>
-      
-      <a href="#" class="group relative inline-block px-4 py-2 font-semibold text-gray-700 transition duration-300 ease-in-out rounded-xl overflow-hidden hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
-        <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-[2px] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full animate-pulse"></span>
-        <span class="absolute inset-0 bg-blue-50 scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out rounded-xl z-0"></span>
-        <span class="relative z-10 group-hover:scale-105 group-hover:tracking-wide transition-all duration-300 ease-in-out">
-         Blogs
-        </span>
-      </a>
-      </nav>
-     
-      </nav>
-      
-      
-    
-      <!-- Right Side Buttons -->
-      <div class="hidden md:flex items-center space-x-4 text-sm font-medium">
-        
-        <a href="#" class="group relative inline-block px-4 py-2 font-semibold text-blue-700 transition duration-300 ease-in-out rounded-xl overflow-hidden focus:outline-none focus:ring-2 focus:ring-blue-400">
-
-            <!-- Shimmer bar (active by default) -->
-            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-[2px] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full animate-pulse opacity-100 group-hover:opacity-0 transition-opacity duration-300"></span>
-          
-            <!-- Background filled by default, shrinks on hover -->
-            <span class="absolute inset-0 bg-blue-50 scale-100 group-hover:scale-0 transition-transform duration-300 ease-in-out rounded-xl z-0"></span>
-          
-            <!-- Text effect: bigger by default, resets on hover -->
-            <span class="relative z-10 scale-105 tracking-wide group-hover:scale-100 group-hover:tracking-normal transition-all duration-300 ease-in-out">
-              Login
-            </span>
-          </a>
-          
-        <a href="#" class="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-2 rounded-full shadow-md hover:scale-105 transition-all duration-300">
-          Sign Up
-        </a>
-      </div>
-    </header>
-<!-- Hero Section -->
-<section class="relative min-h-screen flex items-center justify-start px-6 lg:px-16 py-10 text-white bg-cover bg-center" >
-    <!-- Content Wrapper -->
-    <div class="flex flex-col w-full max-w-5xl">
-      <!-- Top Text + Search -->
-      <div class="space-y-6">
-        <!-- Headline -->
-        <h2 class="text-4xl lg:text-5xl font-extrabold leading-tight drop-shadow-xl max-w-xl">
-          Discover Trusted Dental Clinics Near You
-        </h2>
-        <p class="text-lg text-gray-200 max-w-xl">
-          Compare hospitals, check services, and book appointments in one tap.
-        </p>
-  
-        <!-- Search Bar -->
-        <div class="space-y-4 sm:space-y-0 sm:flex sm:space-x-4">
-            <!-- Location Input -->
-            <div class="relative w-[150px] group">
-              <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 z-10 text-sm">📍</span>
-              <input
-                type="text"
-                placeholder="Location"
-                class="pl-8 w-full h-10 text-sm rounded-lg text-white bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-gray-300 transition duration-300 shadow-sm"
-              />
-            </div>
-  
-          <!-- Keyword Input -->
-           <!-- Search Keyword Input -->
-  <div class="relative w-[220px] group">
-    <input
-      type="text"
-      placeholder="Search clinics..."
-      class="w-full h-10 text-sm px-3 rounded-lg text-white bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-gray-300 transition duration-300 shadow-sm"
-    />
-  </div>
-  
-          <!-- Search Button -->
-          <button class="group relative px-5 py-2 text-sm font-semibold text-white rounded-full shadow-md bg-gradient-to-r from-blue-500 to-blue-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400">
-            <span class="absolute inset-0 bg-white/10 scale-100 group-hover:scale-0 transition-transform duration-300 ease-in-out rounded-full z-0"></span>
-            <span class="relative z-10">Search</span>
-          </button>
-        </div>
-      </div>
-  
-      <!-- Cards Section -->
-      <div class="mt-10 flex gap-4 animate-slide-up">
-        <!-- Card 1 -->
-        <div class="w-24 h-20 p-2 border-l-4 border-blue-400 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer">
-          <div class="flex justify-center items-center mb-1">
-            <img src="./assest/stethoscope-solid.svg" alt="doctor" class="w-5 h-5" />
-          </div>
-          <p class="text-center text-xs font-medium">Consult</p>
-        </div>
-  
-        <!-- Card 2 -->
-        <div class="w-24 h-20 p-2 border-l-4 border-blue-400 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer">
-          <div class="flex justify-center items-center mb-1">
-            <img src="./assest/hospital-solid.svg" alt="medicine" class="w-5 h-5" />
-          </div>
-          <p class="text-center text-xs font-medium">Medicines</p>
-        </div>
-  
-        <!-- Card 3 -->
-        <div class="w-24 h-20 p-2 border-l-4 border-blue-400 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer">
-          <div class="flex justify-center items-center mb-1">
-            <img src="./assest/book-medical-solid.svg" alt="records" class="w-5 h-5" />
-          </div>
-          <p class="text-center text-xs font-medium">Records</p>
-        </div>
-  
-        <!-- Card 4 -->
-        <div class="w-24 h-20 p-2 border-l-4 border-blue-400 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer">
-          <div class="flex justify-center items-center mb-1">
-            <img src="./assest/bandage-solid.svg" alt="test" class="w-5 h-5" />
-          </div>
-          <p class="text-center text-xs font-medium">Book Test</p>
-        </div>
-      </div>
+    <!-- Background Image Layer -->
+    <div class="absolute inset-0 w-full h-full">
+        <img src="./assest/hero-image.png" class="w-full h-full object-cover object-right z-0" />
+        <div class="absolute inset-0 bg-gradient-custom z-10"></div>
     </div>
-  </section>
-<!-- Top Articles Section -->
-<section class="py-20 bg-gradient-to-b from-blue-50 via-white to-blue-50 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-14 text-gray-800 drop-shadow-sm">
-        Read top articles from health experts
-      </h2>
-  
-      <!-- Arrow Left -->
-      <button
-        class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-blue-100 text-blue-600 hover:bg-blue-200 transition rounded-full shadow-lg p-2 z-10 border">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
-  
-      <!-- Cards -->
-     <!-- Cards Section -->
-<div class="flex gap-6 overflow-x-auto px-10 scrollbar-hide">
+
+    <!-- Foreground Content -->
+    <div class="relative z-20">
+
+        <!-- Navbar -->
+        <header
+            class="bg-gradient-custom backdrop-blur-md flex items-center justify-between px-8 py-6 lg:py-8 w-full navbar-animate">
+            <h1 class="text-3xl font-bold">Kalope Dental</h1>
+
+            <nav class="hidden md:flex items-center space-x-4">
+                <a href="#"
+                    class="group relative inline-block px-4 py-2 font-semibold text-gray-700 transition duration-300 ease-in-out rounded-xl overflow-hidden hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    <!-- Bottom border shine -->
+                    <span
+                        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-[2px] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full animate-pulse"></span>
+
+                    <!-- Hover background -->
+                    <span
+                        class="absolute inset-0 bg-blue-50 scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out rounded-xl z-0"></span>
+
+                    <!-- Text with hover grow -->
+                    <span
+                        class="relative z-10 group-hover:scale-105 group-hover:tracking-wide transition-all duration-300 ease-in-out">
+                        Find Doctor
+                    </span>
+                </a>
+
+                <!-- Repeat for other links -->
+                <a href="#"
+                    class="group relative inline-block px-4 py-2 font-semibold text-gray-700 transition duration-300 ease-in-out rounded-xl overflow-hidden hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    <span
+                        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-[2px] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full animate-pulse"></span>
+                    <span
+                        class="absolute inset-0 bg-blue-50 scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out rounded-xl z-0"></span>
+                    <span
+                        class="relative z-10 group-hover:scale-105 group-hover:tracking-wide transition-all duration-300 ease-in-out">
+                        Video Consult
+                    </span>
+                </a>
+
+                <!-- Add similar blocks for Surgeries, Packages, Products, Blog -->
+                <a href="#"
+                    class="group relative inline-block px-4 py-2 font-semibold text-gray-700 transition duration-300 ease-in-out rounded-xl overflow-hidden hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    <span
+                        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-[2px] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full animate-pulse"></span>
+                    <span
+                        class="absolute inset-0 bg-blue-50 scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out rounded-xl z-0"></span>
+                    <span
+                        class="relative z-10 group-hover:scale-105 group-hover:tracking-wide transition-all duration-300 ease-in-out">
+                        Surgeries
+                    </span>
+                </a>
+
+                <a href="#"
+                    class="group relative inline-block px-4 py-2 font-semibold text-gray-700 transition duration-300 ease-in-out rounded-xl overflow-hidden hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    <span
+                        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-[2px] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full animate-pulse"></span>
+                    <span
+                        class="absolute inset-0 bg-blue-50 scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out rounded-xl z-0"></span>
+                    <span
+                        class="relative z-10 group-hover:scale-105 group-hover:tracking-wide transition-all duration-300 ease-in-out">
+                        Packages
+                    </span>
+                </a>
+                <a href="#"
+                    class="group relative inline-block px-4 py-2 font-semibold text-gray-700 transition duration-300 ease-in-out rounded-xl overflow-hidden hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    <span
+                        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-[2px] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full animate-pulse"></span>
+                    <span
+                        class="absolute inset-0 bg-blue-50 scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out rounded-xl z-0"></span>
+                    <span
+                        class="relative z-10 group-hover:scale-105 group-hover:tracking-wide transition-all duration-300 ease-in-out">
+                        Products
+                    </span>
+                </a>
+
+                <a href="#"
+                    class="group relative inline-block px-4 py-2 font-semibold text-gray-700 transition duration-300 ease-in-out rounded-xl overflow-hidden hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    <span
+                        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-[2px] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full animate-pulse"></span>
+                    <span
+                        class="absolute inset-0 bg-blue-50 scale-0 group-hover:scale-100 transition-transform duration-300 ease-in-out rounded-xl z-0"></span>
+                    <span
+                        class="relative z-10 group-hover:scale-105 group-hover:tracking-wide transition-all duration-300 ease-in-out">
+                        Blogs
+                    </span>
+                </a>
+            </nav>
+
+            </nav>
+
+
+
+            <!-- Right Side Buttons -->
+            <div class="hidden md:flex items-center space-x-4 text-sm font-medium">
+
+                <a href="#"
+                    class="group relative inline-block px-4 py-2 font-semibold text-blue-700 transition duration-300 ease-in-out rounded-xl overflow-hidden focus:outline-none focus:ring-2 focus:ring-blue-400">
+
+                    <!-- Shimmer bar (active by default) -->
+                    <span
+                        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-[2px] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full animate-pulse opacity-100 group-hover:opacity-0 transition-opacity duration-300"></span>
+
+                    <!-- Background filled by default, shrinks on hover -->
+                    <span
+                        class="absolute inset-0 bg-blue-50 scale-100 group-hover:scale-0 transition-transform duration-300 ease-in-out rounded-xl z-0"></span>
+
+                    <!-- Text effect: bigger by default, resets on hover -->
+                    <span
+                        class="relative z-10 scale-105 tracking-wide group-hover:scale-100 group-hover:tracking-normal transition-all duration-300 ease-in-out">
+                        Login
+                    </span>
+                </a>
+
+                <a href="#"
+                    class="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-2 rounded-full shadow-md hover:scale-105 transition-all duration-300">
+                    Sign Up
+                </a>
+            </div>
+        </header>
+        <!-- Hero Section -->
+        <section
+            class="relative min-h-screen flex items-center justify-start px-6 lg:px-16 py-10 text-white bg-cover bg-center">
+            <!-- Content Wrapper -->
+            <div class="flex flex-col w-full max-w-5xl">
+                <!-- Top Text + Search -->
+                <div class="space-y-6">
+                    <!-- Headline -->
+                    <h2 class="text-4xl lg:text-5xl font-extrabold leading-tight drop-shadow-xl max-w-xl">
+                        Discover Trusted Dental Clinics Near You
+                    </h2>
+                    <p class="text-lg text-gray-200 max-w-xl">
+                        Compare hospitals, check services, and book appointments in one tap.
+                    </p>
+
+                    <!-- Search Bar -->
+                    <div class="space-y-4 sm:space-y-0 sm:flex sm:space-x-4">
+                        <!-- Location Input -->
+                        <div class="relative w-[150px] group">
+                            <span
+                                class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 z-10 text-sm">📍</span>
+                            <input type="text" placeholder="Location"
+                                class="pl-8 w-full h-10 text-sm rounded-lg text-white bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-gray-300 transition duration-300 shadow-sm" />
+                        </div>
+
+                        <!-- Search Keyword Input -->
+                        <div class="relative w-[220px] group">
+                            <input type="text" placeholder="Search clinics..."
+                                class="w-full h-10 text-sm px-3 rounded-lg text-white bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-gray-300 transition duration-300 shadow-sm" />
+                        </div>
+
+                        <!-- Search Button -->
+                        <button
+                            class="group relative px-5 py-2 text-sm font-semibold text-white rounded-full shadow-md bg-gradient-to-r from-blue-500 to-blue-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                            <span
+                                class="absolute inset-0 bg-white/10 scale-100 group-hover:scale-0 transition-transform duration-300 ease-in-out rounded-full z-0"></span>
+                            <span class="relative z-10">Search</span>
+                        </button>
+                    </div>
+                </div>
+
+    <!-- Cards Section (Bigger + Left Aligned) -->
+<div class="mt-6 ml-4 flex gap-6 flex-wrap animate-slide-up">
     <!-- Card 1 -->
-    <div
-      class="min-w-[280px] max-w-xs bg-blue-50 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition rounded-xl relative group shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_10px_28px_rgba(37,99,235,0.45)] duration-300">
-      <img class="w-full h-40 object-cover rounded-t-xl" src="./assest/imunity-food.jpg" alt="Immunity Foods" />
-      <div class="p-4 space-y-1">
-        <h3 class="text-base font-semibold text-gray-800">5 Foods That Boost Immunity</h3>
-        <p class="text-sm text-blue-800 font-medium">Ms. Swati Kapoor, Dietitian/Nutritionist</p>
-        <p class="text-xs flex items-center gap-2">
-          <span class="text-red-600 flex items-center gap-1">❤️ 750 Likes</span> •
-          <span class="text-red-500 flex items-center gap-1">👁️ 104336 Views</span>
-        </p>
+    <div class="w-28 h-24 p-3 border-l-4 border-blue-400 bg-white/10 text-white shadow-md 
+                hover:scale-105 transition-all duration-300 cursor-pointer rounded-lg">
+      <div class="flex justify-center items-center mb-2">
+        <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm 
+                    shadow-[0_0_18px_rgba(255,255,255,0.25)] flex justify-center items-center">
+          <img src="./assest/Consultanim.gif" alt="doctor" class="w-8 h-8 object-contain" />
+        </div>
       </div>
+      <p class="text-center text-sm font-medium">Consult</p>
     </div>
   
     <!-- Card 2 -->
-    <div
-      class="min-w-[280px] max-w-xs bg-blue-50 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition rounded-xl relative group shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_10px_28px_rgba(37,99,235,0.45)] duration-300">
-      <img class="w-full h-40 object-cover rounded-t-xl"
-        src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=600&q=80"
-        alt="Belly Fat Tips" />
-      <div class="p-4 space-y-1">
-        <h3 class="text-base font-semibold text-gray-800">16 Lifestyle Tips to Get Rid of Belly Fat</h3>
-        <p class="text-sm text-blue-800 font-medium">Dr. Sachin Goel</p>
-        <p class="text-xs flex items-center gap-2">
-          <span class="text-red-600 flex items-center gap-1">❤️ 488 Likes</span> •
-          <span class="text-red-500 flex items-center gap-1">👁️ 116876 Views</span>
-        </p>
+    <div class="w-28 h-24 p-3 border-l-4 border-blue-400 bg-white/10 text-white shadow-md 
+                hover:scale-105 transition-all duration-300 cursor-pointer rounded-lg">
+      <div class="flex justify-center items-center mb-2">
+        <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm 
+                    shadow-[0_0_18px_rgba(255,255,255,0.25)] flex justify-center items-center">
+          <img src="./assest/Medicinesanim.gif" alt="medicine" class="w-8 h-8 object-contain" />
+        </div>
       </div>
+      <p class="text-center text-sm font-medium">Medicines</p>
     </div>
   
     <!-- Card 3 -->
-    <div
-      class="min-w-[280px] max-w-xs bg-blue-50 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition rounded-xl relative group shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_10px_28px_rgba(37,99,235,0.45)] duration-300">
-      <img class="w-full h-40 object-cover rounded-t-xl" src="./assest/ghee-benefit.jpg" alt="Ghee Benefits" />
-      <div class="p-4 space-y-1">
-        <h3 class="text-base font-semibold text-gray-800">"Ghar Ka Ghee" Your Heart-Mate!</h3>
-        <p class="text-sm text-blue-800 font-medium">Dr. Avinash Vilas Wankhede</p>
-        <p class="text-xs flex items-center gap-2">
-          <span class="text-red-600 flex items-center gap-1">❤️ 298 Likes</span> •
-          <span class="text-red-500 flex items-center gap-1">👁️ 62139 Views</span>
-        </p>
+    <div class="w-28 h-24 p-3 border-l-4 border-blue-400 bg-white/10 text-white shadow-md 
+                hover:scale-105 transition-all duration-300 cursor-pointer rounded-lg">
+      <div class="flex justify-center items-center mb-2">
+        <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm 
+                    shadow-[0_0_18px_rgba(255,255,255,0.25)] flex justify-center items-center">
+          <img src="./assest/Recordsanim.gif" alt="records" class="w-8 h-8 object-contain" />
+        </div>
       </div>
+      <p class="text-center text-sm font-medium">Records</p>
     </div>
   
     <!-- Card 4 -->
-    <div
-      class="min-w-[280px] max-w-xs bg-blue-50 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition rounded-xl relative group shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_10px_28px_rgba(37,99,235,0.45)] duration-300">
-      <img class="w-full h-40 object-cover rounded-t-xl" src="./assest/How to Naturally Stay Energetic Daily.jpeg"
-        alt="Stay Energetic" />
-      <div class="p-4 space-y-1">
-        <h3 class="text-base font-semibold text-gray-800">How to Naturally Stay Energetic Daily</h3>
-        <p class="text-sm text-blue-800 font-medium">Dr. Anita Sharma</p>
-        <p class="text-xs flex items-center gap-2">
-          <span class="text-red-600 flex items-center gap-1">❤️ 412 Likes</span> •
-          <span class="text-red-500 flex items-center gap-1">👁️ 90234 Views</span>
-        </p>
+    <div class="w-28 h-24 p-3 border-l-4 border-blue-400 bg-white/10 text-white shadow-md 
+                hover:scale-105 transition-all duration-300 cursor-pointer rounded-lg">
+      <div class="flex justify-center items-center mb-2">
+        <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm 
+                    shadow-[0_0_18px_rgba(255,255,255,0.25)] flex justify-center items-center">
+          <img src="./assest/booktestanim.gif" alt="test" class="w-8 h-8 object-contain" />
+        </div>
       </div>
+      <p class="text-center text-sm font-medium">Book Test</p>
     </div>
   </div>
   
   
-      <!-- Arrow Right -->
-      <button
-        class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-blue-100 text-blue-600 hover:bg-blue-200 transition rounded-full shadow-lg p-2 z-10 border">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
-    </div>
-  </section>
   
-<!-- Call to Action Section -->
+            </div>
+        </section>
+        <!-- Top Articles Section -->
+        <section class="py-20 bg-gradient-to-b from-blue-50 via-white to-blue-50 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-14 text-gray-800 drop-shadow-sm">
+                    Read top articles from health experts
+                </h2>
+
+                <!-- Arrow Left -->
+                <button
+                    class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-blue-100 text-blue-600 hover:bg-blue-200 transition rounded-full shadow-lg p-2 z-10 border">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+
+                <!-- Cards -->
+                <!-- Cards Section -->
+                <div class="flex gap-6 overflow-x-auto px-10 scrollbar-hide">
+                    <!-- Card 1 -->
+                    <div
+                        class="min-w-[280px] max-w-xs bg-blue-50 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition rounded-xl relative group shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_10px_28px_rgba(37,99,235,0.45)] duration-300">
+                        <img class="w-full h-40 object-cover rounded-t-xl" src="./assest/imunity-food.jpg"
+                            alt="Immunity Foods" />
+                        <div class="p-4 space-y-1">
+                            <h3 class="text-base font-semibold text-gray-800">5 Foods That Boost Immunity</h3>
+                            <p class="text-sm text-blue-800 font-medium">Ms. Swati Kapoor, Dietitian/Nutritionist</p>
+                            <p class="text-xs flex items-center gap-2">
+                                <span class="text-red-600 flex items-center gap-1">❤️ 750 Likes</span> •
+                                <span class="text-red-500 flex items-center gap-1">👁️ 104336 Views</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="min-w-[280px] max-w-xs bg-blue-50 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition rounded-xl relative group shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_10px_28px_rgba(37,99,235,0.45)] duration-300">
+                        <img class="w-full h-40 object-cover rounded-t-xl"
+                            src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=600&q=80"
+                            alt="Belly Fat Tips" />
+                        <div class="p-4 space-y-1">
+                            <h3 class="text-base font-semibold text-gray-800">16 Lifestyle Tips to Get Rid of Belly Fat
+                            </h3>
+                            <p class="text-sm text-blue-800 font-medium">Dr. Sachin Goel</p>
+                            <p class="text-xs flex items-center gap-2">
+                                <span class="text-red-600 flex items-center gap-1">❤️ 488 Likes</span> •
+                                <span class="text-red-500 flex items-center gap-1">👁️ 116876 Views</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="min-w-[280px] max-w-xs bg-blue-50 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition rounded-xl relative group shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_10px_28px_rgba(37,99,235,0.45)] duration-300">
+                        <img class="w-full h-40 object-cover rounded-t-xl" src="./assest/ghee-benefit.jpg"
+                            alt="Ghee Benefits" />
+                        <div class="p-4 space-y-1">
+                            <h3 class="text-base font-semibold text-gray-800">"Ghar Ka Ghee" Your Heart-Mate!</h3>
+                            <p class="text-sm text-blue-800 font-medium">Dr. Avinash Vilas Wankhede</p>
+                            <p class="text-xs flex items-center gap-2">
+                                <span class="text-red-600 flex items-center gap-1">❤️ 298 Likes</span> •
+                                <span class="text-red-500 flex items-center gap-1">👁️ 62139 Views</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div
+                        class="min-w-[280px] max-w-xs bg-blue-50 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition rounded-xl relative group shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_10px_28px_rgba(37,99,235,0.45)] duration-300">
+                        <img class="w-full h-40 object-cover rounded-t-xl"
+                            src="./assest/How to Naturally Stay Energetic Daily.jpeg" alt="Stay Energetic" />
+                        <div class="p-4 space-y-1">
+                            <h3 class="text-base font-semibold text-gray-800">How to Naturally Stay Energetic Daily</h3>
+                            <p class="text-sm text-blue-800 font-medium">Dr. Anita Sharma</p>
+                            <p class="text-xs flex items-center gap-2">
+                                <span class="text-red-600 flex items-center gap-1">❤️ 412 Likes</span> •
+                                <span class="text-red-500 flex items-center gap-1">👁️ 90234 Views</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Arrow Right -->
+                <button
+                    class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-blue-100 text-blue-600 hover:bg-blue-200 transition rounded-full shadow-lg p-2 z-10 border">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+       <!-- Call to Action Section -->
 <section class="bg-gradient-to-br from-blue-200 via-blue-100 to-white text-black py-20 px-4 mb-16">
-    <div class="max-w-5xl mx-auto text-center space-y-6">
+    <div class="max-w-6xl mx-auto text-center space-y-6">
       <h2 class="text-3xl md:text-4xl font-bold drop-shadow-md">
         Ready to find your perfect dental clinic?
       </h2>
@@ -349,72 +396,94 @@
       </a>
   
       <!-- Cards Row -->
-      <div class="mt-12 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 px-4">
-        <!-- Card 1 -->
-        <div
-          class="bg-white text-blue-800 px-4 py-6 rounded-xl shadow-md flex flex-col items-center space-y-2 transition transform duration-300 hover:scale-105 hover:shadow-lg">
-          <span class="text-2xl">⭐</span>
-          <p class="text-sm font-medium text-center">Rated <span class="font-bold text-blue-900">4.9/5</span><br>by 12,000+ users</p>
-        </div>
-  
-        <!-- Card 2 -->
-        <div
-          class="bg-white text-blue-800 px-4 py-6 rounded-xl shadow-md flex flex-col items-center space-y-2 transition transform duration-300 hover:scale-105 hover:shadow-lg">
-          <span class="text-2xl">🛡</span>
-          <p class="text-sm font-medium text-center"><span class="font-bold text-blue-900">Verified clinics</span><br>with genuine reviews</p>
-        </div>
-  
-        <!-- Card 3 -->
-        <div
-          class="bg-white text-blue-800 px-4 py-6 rounded-xl shadow-md flex flex-col items-center space-y-2 transition transform duration-300 hover:scale-105 hover:shadow-lg">
-          <span class="text-2xl">📍</span>
-          <p class="text-sm font-medium text-center">Explore clinics <span class="font-bold text-blue-900">near you</span><br>in just one click!</p>
-        </div>
-  
-        <!-- Card 4 -->
-        <div
-          class="bg-white text-blue-800 px-4 py-6 rounded-xl shadow-md flex flex-col items-center space-y-2 transition transform duration-300 hover:scale-105 hover:shadow-lg">
-          <span class="text-2xl">📞</span>
-          <p class="text-sm font-medium text-center">Need help?<br>Call us at <span class="font-bold text-blue-900">1800-XXX-XXXX</span></p>
-        </div>
+      <!-- Cards Row -->
+<div class="mt-12 flex flex-wrap justify-center gap-4 md:gap-6 px-4">
+    <!-- Card 1 -->
+    <div
+      class="bg-white text-blue-800 px-6 py-6 rounded-2xl shadow-md flex flex-col items-center space-y-3 transition transform duration-300 hover:scale-105 hover:shadow-lg w-40 h-40">
+      <div
+        class="w-14 h-14 rounded-full bg-white/30 flex justify-center items-center shadow-[0_0_12px_rgba(0,0,0,0.1)] overflow-hidden">
+        <img src="./assest/Ratedanim.gif" alt="anim" class="w-10 h-10 object-contain" />
       </div>
+      <p class="text-sm text-center font-medium leading-tight">
+        Rated <span class="font-bold text-blue-900">4.9/5</span><br>by 12,000+ users
+      </p>
+    </div>
+  
+    <!-- Card 2 -->
+    <div
+      class="bg-white text-blue-800 px-6 py-6 rounded-2xl shadow-md flex flex-col items-center space-y-3 transition transform duration-300 hover:scale-105 hover:shadow-lg w-40 h-40">
+      <div
+        class="w-14 h-14 rounded-full bg-white/30 flex justify-center items-center shadow-[0_0_12px_rgba(0,0,0,0.1)] overflow-hidden">
+        <img src="./assest/Verifiedanim.gif" alt="" class="w-10 h-10 object-contain" />
+      </div>
+      <p class="text-sm text-center font-medium leading-tight">
+        <span class="font-bold text-blue-900">Verified clinics</span><br>with genuine reviews
+      </p>
+    </div>
+  
+    <!-- Card 3 -->
+    <div
+      class="bg-white text-blue-800 px-6 py-6 rounded-2xl shadow-md flex flex-col items-center space-y-3 transition transform duration-300 hover:scale-105 hover:shadow-lg w-40 h-40">
+      <div
+        class="w-14 h-14 rounded-full bg-white/30 flex justify-center items-center shadow-[0_0_12px_rgba(0,0,0,0.1)] overflow-hidden">
+        <img src="./assest/Exploreanim.gif" alt="" class="w-10 h-10 object-contain" />
+      </div>
+      <p class="text-sm text-center font-medium leading-tight">
+        Explore clinics <span class="font-bold text-blue-900">near you</span><br>in just one click!
+      </p>
+    </div>
+  
+    <!-- Card 4 -->
+    <div
+      class="bg-white text-blue-800 px-6 py-6 rounded-2xl shadow-md flex flex-col items-center space-y-3 transition transform duration-300 hover:scale-105 hover:shadow-lg w-40 h-40">
+      <div
+        class="w-14 h-14 rounded-full bg-white/30 flex justify-center items-center shadow-[0_0_12px_rgba(0,0,0,0.1)] overflow-hidden">
+        <img src="./assest/helpanim.gif" alt="" class="w-10 h-10 object-contain" />
+      </div>
+      <p class="text-sm text-center font-medium leading-tight">
+        Need help?<br>Call <span class="font-bold text-blue-900">1800-XXX-XXXX</span>
+      </p>
+    </div>
+  </div>
+  
     </div>
   </section>
   
-  
-  
-    <!-- Footer -->
-    <footer class="bg-blue-800 text-blue-100 py-12">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-                <h2 class="font-bold text-xl mb-4">Kalope Dental</h2>
-                <p>Your trusted platform for exploring dental care services and booking appointments with verified
-                    hospitals and clinics.</p>
+            
+
+        <!-- Footer -->
+        <footer class="bg-blue-800 text-blue-100 py-12">
+            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h2 class="font-bold text-xl mb-4">Kalope Dental</h2>
+                    <p>Your trusted platform for exploring dental care services and booking appointments with verified
+                        hospitals and clinics.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-2">Explore</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="hover:underline">Find Clinics</a></li>
+                        <li><a href="#" class="hover:underline">Video Consult</a></li>
+                        <li><a href="#" class="hover:underline">Cities</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-2">Help</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="hover:underline">FAQs</a></li>
+                        <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:underline">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-2">Contact</h3>
+                    <p>Email: support@kalopedental.com</p>
+                    <p>Phone: +91-98765-43210</p>
+                </div>
             </div>
-            <div>
-                <h3 class="font-semibold mb-2">Explore</h3>
-                <ul class="space-y-1">
-                    <li><a href="#" class="hover:underline">Find Clinics</a></li>
-                    <li><a href="#" class="hover:underline">Video Consult</a></li>
-                    <li><a href="#" class="hover:underline">Cities</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="font-semibold mb-2">Help</h3>
-                <ul class="space-y-1">
-                    <li><a href="#" class="hover:underline">FAQs</a></li>
-                    <li><a href="#" class="hover:underline">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:underline">Terms of Service</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="font-semibold mb-2">Contact</h3>
-                <p>Email: support@kalopedental.com</p>
-                <p>Phone: +91-98765-43210</p>
-            </div>
-        </div>
-        <div class="text-center mt-10 text-sm text-blue-200">&copy; 2025 Kalope Dental. All rights reserved.</div>
-    </footer>
+            <div class="text-center mt-10 text-sm text-blue-200">&copy; 2025 Kalope Dental. All rights reserved.</div>
+        </footer>
 
 </body>
 
