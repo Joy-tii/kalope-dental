@@ -21,11 +21,11 @@
     /* HEADER GRADIENT without opacity (solid colors) */
     .bg-gradient-header {
       background: radial-gradient(circle at 70% 50%,
-      rgba(50, 80, 120) 60%,
+          rgba(50, 80, 120) 60%,
           rgb(27, 48, 101) 80%,
           rgb(8, 17, 46) 100%);
-    
-          /* #5a78a0 30%,
+
+      /* #5a78a0 30%,
           #325078 60%,
           #1e3264 80%,
           #0a1432 100%); */
@@ -112,16 +112,14 @@
 
       <!-- Desktop Right Buttons -->
       <div class="hidden md:flex items-center space-x-4 text-sm font-medium">
-        <!-- Login -->
-        <a href="#"
-          class="group relative inline-block px-4 py-2 font-semibold text-blue-700 transition duration-300 ease-in-out rounded-xl overflow-hidden focus:outline-none focus:ring-2 focus:ring-blue-400">
-          <span
-            class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-10 h-[2px] bg-gradient-to-r from-blue-300 to-blue-500 rounded-full animate-pulse opacity-100 group-hover:opacity-0 transition-opacity duration-300"></span>
-          <span
-            class="absolute inset-0 bg-blue-50 scale-100 group-hover:scale-0 transition-transform duration-300 ease-in-out rounded-xl z-0"></span>
-          <span
-            class="relative z-10 scale-105 tracking-wide group-hover:scale-100 group-hover:tracking-normal transition-all duration-300 ease-in-out">Login</span>
+        <a href="#" class="inline-block px-5 py-2 font-semibold text-blue-800 bg-white rounded-xl transition-all duration-300 ease-in-out
+               hover:text-white hover:bg-white/10 hover:backdrop-blur-md
+               hover:border hover:border-blue-400 hover:shadow-[0_0_8px_rgba(50,80,120,0.3)]
+               border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-400">
+          Login
         </a>
+
+
 
         <!-- Sign Up -->
         <a href="#"
@@ -131,7 +129,7 @@
       </div>
 
       <!-- Hamburger Button -->
-      <button id="hamburger-btn" class="md:hidden text-blue-800 text-2xl p-2 z-50 relative">
+      <button id="hamburger-btn" class="md:hidden text-white-800 text-2xl p-2 z-50 relative">
         <i class="fas fa-bars"></i>
       </button>
 
@@ -160,350 +158,374 @@
       </div>
     </header>
     <!-- Hero Section -->
-<section
-class="relative z-10 w-full min-h-screen flex items-center justify-center px-6 lg:px-16 pt-40 pb-10 text-white bg-cover bg-center bg-no-repeat"
-style="background-image: url('./assest/your-bg.jpg');">
-<!-- Background Overlay -->
-<div class="absolute inset-0 bg-gradient-hero z-0 opacity-90"></div> <!-- Changed opacity here -->
+    <section
+      class="relative z-10 w-full min-h-screen flex items-center justify-center px-6 lg:px-16 pt-40 pb-10 text-white bg-cover bg-center bg-no-repeat"
+      style="background-image: url('./assest/your-bg.jpg');">
+      <!-- Background Overlay -->
+      <div class="absolute inset-0 bg-gradient-hero z-0 opacity-90"></div> <!-- Changed opacity here -->
 
-<!-- Content Wrapper -->
-<div class="flex flex-col w-full max-w-5xl items-center justify-center text-center relative z-10">
-  <!-- Top Text + Search -->
-  <div class="space-y-6">
-    <!-- Headline -->
-    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight drop-shadow-xl max-w-xl mx-auto">
-      Discover Trusted Dental Clinics Near You
-    </h2>
-    <p class="text-base sm:text-lg text-white max-w-xl mx-auto">
-      Compare hospitals, check services, and book appointments in one tap.
-    </p>
+      <!-- Content Wrapper -->
+      <div class="flex flex-col w-full max-w-5xl items-center justify-center text-center relative z-10">
+        <!-- Top Text + Search -->
+        <div class="space-y-6">
+          <!-- Headline -->
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight drop-shadow-xl max-w-xl mx-auto">
+            Discover Trusted Dental Clinics Near You
+          </h2>
+          <p class="text-base sm:text-lg text-white max-w-xl mx-auto">
+            Compare hospitals, check services, and book appointments in one tap.
+          </p>
 
-    <!-- Search Bar -->
-    <div class="space-y-4 sm:space-y-0 sm:flex sm:space-x-4 justify-center">
-      <!-- Location Input -->
-      <div class="relative w-[150px] group">
-        <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 z-10 text-sm">📍</span>
-        <input type="text" placeholder="Location"
-          class="pl-8 w-full h-10 text-sm rounded-lg text-white bg-white/20 border border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-gray-300 transition duration-300 shadow-sm" />
+          <!-- Search Bar -->
+          <div class="space-y-4 sm:space-y-0 sm:flex sm:space-x-4 justify-center">
+            <!-- Location Input -->
+            <div class="relative w-[150px] group">
+              <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 z-10 text-sm">📍</span>
+              <input type="text" placeholder="Location"
+                class="pl-8 w-full h-10 text-sm rounded-lg text-white bg-white/20 border border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-gray-300 transition duration-300 shadow-sm" />
+            </div>
+
+            <!-- Search Keyword Input -->
+            <div class="relative w-[220px] group">
+              <input type="text" placeholder="Search clinics..."
+                class="w-full h-10 text-sm px-3 rounded-lg text-white bg-white/20 border border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-gray-300 transition duration-300 shadow-sm" />
+            </div>
+
+            <!-- Search Button -->
+            <button
+              class="group relative px-5 py-2 text-sm font-semibold text-white rounded-full shadow-md bg-gradient-to-r from-blue-500 to-blue-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 flex items-center space-x-2">
+              <svg xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 text-white group-hover:scale-110 transition-transform duration-200" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
+              </svg>
+              <span>Search</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cards Section -->
+        <div class="mt-12 px-2 sm:px-4 flex flex-wrap gap-4 sm:gap-6 animate-slide-up justify-center">
+          <!-- Card 1 -->
+          <div
+            class="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 p-2 sm:p-3 border-l-4 border-blue-400 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer rounded-lg flex flex-col items-center justify-center">
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/20 backdrop-blur-sm shadow-[0_0_18px_rgba(255,255,255,0.25)] flex justify-center items-center mb-1 sm:mb-2">
+              <img src="./assest/Consultanim.gif" alt="Online doctor consultation"
+                class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 object-contain" />
+            </div>
+            <p class="text-[10px] sm:text-sm font-medium hidden sm:block">Consult</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 p-2 sm:p-3 border-l-4 border-blue-400 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer rounded-lg flex flex-col items-center justify-center">
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/20 backdrop-blur-sm shadow-[0_0_18px_rgba(255,255,255,0.25)] flex justify-center items-center mb-1 sm:mb-2">
+              <img src="./assest/Medicinesanim.gif" alt="Online medicine ordering"
+                class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 object-contain" />
+            </div>
+            <p class="text-[10px] sm:text-sm font-medium hidden sm:block">Medicines</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 p-2 sm:p-3 border-l-4 border-blue-400 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer rounded-lg flex flex-col items-center justify-center">
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/20 backdrop-blur-sm shadow-[0_0_18px_rgba(255,255,255,0.25)] flex justify-center items-center mb-1 sm:mb-2">
+              <img src="./assest/Recordsanim.gif" alt="Medical records access"
+                class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 object-contain" />
+            </div>
+            <p class="text-[10px] sm:text-sm font-medium hidden sm:block">Records</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 p-2 sm:p-3 border-l-4 border-blue-400 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer rounded-lg flex flex-col items-center justify-center">
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/20 backdrop-blur-sm shadow-[0_0_18px_rgba(255,255,255,0.25)] flex justify-center items-center mb-1 sm:mb-2">
+              <img src="./assest/booktestanim.gif" alt="Book lab test"
+                class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 object-contain" />
+            </div>
+            <p class="text-[10px] sm:text-sm font-medium hidden sm:block">Book Test</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- Featured Clinics & Hospitals -->
+
+    <section class="bg-gradient-to-r from-blue-50 to-blue-100 py-16 px-4 md:px-10 lg:px-20">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-800">Featured Clinics & Hospitals</h2>
+        <p class="text-gray-600 mt-3">Top-rated healthcare providers trusted by thousands of patients</p>
       </div>
 
-      <!-- Search Keyword Input -->
-      <div class="relative w-[220px] group">
-        <input type="text" placeholder="Search clinics..."
-          class="w-full h-10 text-sm px-3 rounded-lg text-white bg-white/20 border border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-gray-300 transition duration-300 shadow-sm" />
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        <!-- Clinic Card 1 -->
+        <div class="relative rounded-2xl shadow-xl overflow-hidden bg-white">
+          <img src="./assest/smile-bright-dental-clinic.avif" alt="SmileBright Dental Clinic"
+            class="w-full h-52 object-cover" />
+          <div class="p-5 space-y-2">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xl font-semibold text-gray-800">SmileBright Dental Clinic</h3>
+              <span class="text-sm bg-blue-800 text-white px-2 py-0.5 rounded-full shadow">⭐ 4.9 / 5</span>
+            </div>
+            <p class="text-sm text-gray-600">📍 Patna, Bihar</p>
+            <p class="text-sm text-gray-700">🦷 Dental · Cosmetic Dentistry</p>
+            <p class="text-sm font-semibold text-green-500">🟢 Available Today</p>
+            <div class="flex flex-wrap gap-2 text-xs mt-2">
+              <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">Braces</span>
+              <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">Teeth Whitening</span>
+            </div>
+            <p class="italic text-sm text-gray-500 mt-2">“Gentle care. Bright smiles.”</p>
+            <button class="mt-4 w-full text-white py-2 rounded-lg font-medium transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-300"
+  style="background: radial-gradient(circle at center, rgba(50, 80, 120, 0.8) 0%, rgba(30, 50, 100, 0.9) 100%);">
+  Book Now
+</button>
+          </div>
+        </div>
+
+        <!-- Clinic Card 2 -->
+        <div class="relative rounded-2xl shadow-xl overflow-hidden bg-white">
+          <img src="./assest/Healing Touch Multispeciality Hospital.webp" alt="Healing Touch Multispeciality"
+            class="w-full h-52 object-cover" />
+          <div class="p-5 space-y-2">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xl font-semibold text-gray-800">Healing Touch Multispeciality</h3>
+              <span class="text-sm bg-blue-800 text-white px-2 py-0.5 rounded-full shadow">⭐ 4.7 / 5</span>
+            </div>
+            <p class="text-sm text-gray-600">📍 Muzaffarpur</p>
+            <p class="text-sm text-gray-700">🏥 General · ENT · Pediatrics</p>
+            <p class="text-sm font-semibold text-green-500">🟢 Walk-ins Welcome</p>
+            <div class="flex flex-wrap gap-2 text-xs mt-2">
+              <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">ENT</span>
+              <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">Child Care</span>
+            </div>
+            <p class="italic text-sm text-gray-500 mt-2">“Compassionate care for every patient.”</p>
+            <button class="mt-4 w-full text-white py-2 rounded-lg font-medium transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-300"
+            style="background: radial-gradient(circle at center, rgba(50, 80, 120, 0.8) 0%, rgba(30, 50, 100, 0.9) 100%);">
+            View Details
+          </button>
+
+          </div>
+        </div>
+
+        <!-- Clinic Card 3 -->
+        <div class="relative rounded-2xl shadow-xl overflow-hidden bg-white">
+          <img src="./assest/CityCare Clinic.jpeg" alt="CityCare Clinic" class="w-full h-52 object-cover" />
+          <div class="p-5 space-y-2">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xl font-semibold text-gray-800">CityCare Clinic</h3>
+              <span class="text-sm bg-blue-800 text-white px-2 py-0.5 rounded-full shadow">⭐ 4.8 / 5</span>
+            </div>
+            <p class="text-sm text-gray-600">📍 Gaya</p>
+            <p class="text-sm text-gray-700">🫀 Cardiology · General Checkups</p>
+            <p class="text-sm font-semibold text-green-500">🟢 Appointments Available</p>
+            <div class="flex flex-wrap gap-2 text-xs mt-2">
+              <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">Heart Check</span>
+              <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">Full Body</span>
+            </div>
+            <p class="italic text-sm text-gray-500 mt-2">“Your health, our priority.”</p>
+            <button class="mt-4 w-full text-white py-2 rounded-lg font-medium transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-300"
+  style="background: radial-gradient(circle at center, rgba(50, 80, 120, 0.8) 0%, rgba(30, 50, 100, 0.9) 100%);">
+  Book Appointment
+</button>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="bg-gradient-to-b from-blue-50 to-white py-16 px-4 md:px-10 lg:px-20">
+      <!-- Heading -->
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800">Stats</h2>
+        <p class="text-gray-600 mt-2">Real experiences from people who trusted us with their care</p>
       </div>
 
-      <!-- Search Button -->
+      <!-- Testimonials Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <!-- Testimonial Card -->
+        <div
+          class="bg-white/60 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-blue-300 hover:shadow-2xl transition-all duration-500 border-l-4 border-[rgba(30,80,150,0.5)]">
+          <div class="flex items-center mb-4 space-x-4">
+            <img src="https://i.pravatar.cc/100?img=32" alt="Patient"
+              class="w-14 h-14 rounded-full border-2 border-blue-300">
+            <div>
+              <h4 class="font-semibold text-gray-800">Anjali S.</h4>
+              <p class="text-sm text-gray-500">Patna</p>
+            </div>
+          </div>
+          <p class="text-gray-700 italic mb-3">“The doctors were very kind and professional. I got my braces here and
+            the results are amazing!”</p>
+          <div class="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</div>
+          <p class="text-xs text-gray-400 mt-2">Visited SmileBright Dental</p>
+        </div>
+
+        <!-- Testimonial Card 2 -->
+        <div
+          class="bg-white/60 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-blue-300 hover:shadow-2xl transition-all duration-500 border-l-4 border-[rgba(30,80,150,0.5)]">
+          <div class="flex items-center mb-4 space-x-4">
+            <img src="https://i.pravatar.cc/100?img=12" alt="Patient"
+              class="w-14 h-14 rounded-full border-2 border-blue-300">
+            <div>
+              <h4 class="font-semibold text-gray-800">Ravi K.</h4>
+              <p class="text-sm text-gray-500">Muzaffarpur</p>
+            </div>
+          </div>
+          <p class="text-gray-700 italic mb-3">“I had a great experience with Healing Touch. Their pediatric care is
+            excellent and staff is cooperative.”</p>
+          <div class="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</div>
+          <p class="text-xs text-gray-400 mt-2">Visited Healing Touch Hospital</p>
+        </div>
+
+        <!-- Testimonial Card 3 -->
+        <div
+          class="bg-white/60 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-blue-300 hover:shadow-2xl transition-all duration-500 border-l-4 border-[rgba(30,80,150,0.5)]">
+          <div class="flex items-center mb-4 space-x-4">
+            <img src="https://i.pravatar.cc/100?img=47" alt="Patient"
+              class="w-14 h-14 rounded-full border-2 border-blue-300">
+            <div>
+              <h4 class="font-semibold text-gray-800">Priya M.</h4>
+              <p class="text-sm text-gray-500">Gaya</p>
+            </div>
+          </div>
+          <p class="text-gray-700 italic mb-3">“CityCare Clinic helped me recover fast from my surgery. Super clean and
+            professional!”</p>
+          <div class="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</div>
+          <p class="text-xs text-gray-400 mt-2">Visited CityCare Clinic</p>
+        </div>
+      </div>
+  </div>
+
+  <!-- Trust Indicators -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    <div class="bg-[rgb(8,17,46)] rounded-xl shadow-xl p-1">
+      <div class="bg-white/10 backdrop-blur-md rounded-lg border border-blue-200 p-4">
+        <p class="text-2xl font-bold text-white">10+</p>
+        <p class="text-sm mt-1 text-gray-200">Clinics across Bihar</p>
+      </div>
+    </div>
+
+    <div class="bg-[rgb(8,17,46)] rounded-xl shadow-xl p-1">
+      <div class="bg-white/10 backdrop-blur-md rounded-lg border border-blue-200 p-4">
+        <p class="text-2xl font-bold text-white">50,000+</p>
+        <p class="text-sm mt-1 text-gray-200">Happy Patients</p>
+      </div>
+    </div>
+
+    <div class="bg-[rgb(8,17,46)] rounded-xl shadow-xl p-1">
+      <div class="bg-white/10 backdrop-blur-md rounded-lg border border-blue-200 p-4">
+        <p class="text-2xl font-bold text-white">24/7</p>
+        <p class="text-sm mt-1 text-gray-200">Booking Available</p>
+      </div>
+    </div>
+
+    <div class="bg-[rgb(8,17,46)] rounded-xl shadow-xl p-1">
+      <div class="bg-white/10 backdrop-blur-md rounded-lg border border-blue-200 p-4">
+        <p class="text-2xl font-bold text-white">100+</p>
+        <p class="text-sm mt-1 text-gray-200">Certified Doctors</p>
+      </div>
+    </div>
+  </div>
+  </section>
+
+
+  <!-- Top Articles Section -->
+  <a href="#" class="block py-20 bg-gradient-to-b from-blue-50 via-white to-blue-50 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-14 text-gray-800 drop-shadow-sm">
+        Read top articles from health experts
+      </h2>
+
+      <!-- Arrow Left -->
       <button
-        class="group relative px-5 py-2 text-sm font-semibold text-white rounded-full shadow-md bg-gradient-to-r from-blue-500 to-blue-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 flex items-center space-x-2">
-        <svg xmlns="http://www.w3.org/2000/svg"
-          class="h-4 w-4 text-white group-hover:scale-110 transition-transform duration-200" fill="none"
-          viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
+        class="absolute left-[calc(3%+30px)] top-1/2 transform -translate-y-1/2 bg-blue-100 text-blue-600 hover:bg-blue-200 transition rounded-full shadow-lg p-2 z-10 border">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
         </svg>
-        <span>Search</span>
+      </button>
+
+      <!-- Cards Section -->
+      <div class="flex gap-6 overflow-x-auto px-10 scrollbar-hide">
+        <!-- Card 1 -->
+        <div
+          class="min-w-[280px] max-w-xs bg-blue-50 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition rounded-xl relative group shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_10px_28px_rgba(37,99,235,0.45)] duration-300">
+          <img class="w-full h-40 object-cover rounded-t-xl" src="./assest/imunity-food.jpg" alt="Immunity Foods" />
+          <div class="p-4 space-y-1">
+            <h3 class="text-base font-semibold text-gray-800">5 Foods That Boost Immunity</h3>
+            <p class="text-sm text-blue-800 font-medium">Ms. Swati Kapoor, Dietitian/Nutritionist</p>
+            <p class="text-xs flex items-center gap-2">
+              <span class="text-red-600 flex items-center gap-1">❤️ 750 Likes</span> •
+              <span class="text-red-500 flex items-center gap-1">👁️ 104336 Views</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="min-w-[280px] max-w-xs bg-blue-50 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition rounded-xl relative group shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_10px_28px_rgba(37,99,235,0.45)] duration-300">
+          <img class="w-full h-40 object-cover rounded-t-xl"
+            src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=600&q=80"
+            alt="Belly Fat Tips" />
+          <div class="p-4 space-y-1">
+            <h3 class="text-base font-semibold text-gray-800">16 Lifestyle Tips to Get Rid of Belly Fat
+            </h3>
+            <p class="text-sm text-blue-800 font-medium">Dr. Sachin Goel</p>
+            <p class="text-xs flex items-center gap-2">
+              <span class="text-red-600 flex items-center gap-1">❤️ 488 Likes</span> •
+              <span class="text-red-500 flex items-center gap-1">👁️ 116876 Views</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="min-w-[280px] max-w-xs bg-blue-50 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition rounded-xl relative group shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_10px_28px_rgba(37,99,235,0.45)] duration-300">
+          <img class="w-full h-40 object-cover rounded-t-xl" src="./assest/ghee-benefit.jpg" alt="Ghee Benefits" />
+          <div class="p-4 space-y-1">
+            <h3 class="text-base font-semibold text-gray-800">"Ghar Ka Ghee" Your Heart-Mate!</h3>
+            <p class="text-sm text-blue-800 font-medium">Dr. Avinash Vilas Wankhede</p>
+            <p class="text-xs flex items-center gap-2">
+              <span class="text-red-600 flex items-center gap-1">❤️ 298 Likes</span> •
+              <span class="text-red-500 flex items-center gap-1">👁️ 62139 Views</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="min-w-[280px] max-w-xs bg-blue-50 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition rounded-xl relative group shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_10px_28px_rgba(37,99,235,0.45)] duration-300">
+          <img class="w-full h-40 object-cover rounded-t-xl" src="./assest/How to Naturally Stay Energetic Daily.jpeg"
+            alt="Stay Energetic" />
+          <div class="p-4 space-y-1">
+            <h3 class="text-base font-semibold text-gray-800">How to Naturally Stay Energetic Daily</h3>
+            <p class="text-sm text-blue-800 font-medium">Dr. Anita Sharma</p>
+            <p class="text-xs flex items-center gap-2">
+              <span class="text-red-600 flex items-center gap-1">❤️ 412 Likes</span> •
+              <span class="text-red-500 flex items-center gap-1">👁️ 90234 Views</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arrow Right -->
+      <button
+        class="absolute right-[calc(3%+30px)] top-1/2 transform -translate-y-1/2 bg-blue-100 text-blue-600 hover:bg-blue-200 transition rounded-full shadow-lg p-2 z-10 border">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
       </button>
     </div>
-  </div>
-
-  <!-- Cards Section -->
-  <div class="mt-12 px-2 sm:px-4 flex flex-wrap gap-4 sm:gap-6 animate-slide-up justify-center">
-    <!-- Card 1 -->
-    <div
-      class="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 p-2 sm:p-3 border-l-4 border-blue-400 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer rounded-lg flex flex-col items-center justify-center">
-      <div
-        class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/20 backdrop-blur-sm shadow-[0_0_18px_rgba(255,255,255,0.25)] flex justify-center items-center mb-1 sm:mb-2">
-        <img src="./assest/Consultanim.gif" alt="Online doctor consultation"
-          class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 object-contain" />
-      </div>
-      <p class="text-[10px] sm:text-sm font-medium hidden sm:block">Consult</p>
-    </div>
-
-    <!-- Card 2 -->
-    <div
-      class="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 p-2 sm:p-3 border-l-4 border-blue-400 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer rounded-lg flex flex-col items-center justify-center">
-      <div
-        class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/20 backdrop-blur-sm shadow-[0_0_18px_rgba(255,255,255,0.25)] flex justify-center items-center mb-1 sm:mb-2">
-        <img src="./assest/Medicinesanim.gif" alt="Online medicine ordering"
-          class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 object-contain" />
-      </div>
-      <p class="text-[10px] sm:text-sm font-medium hidden sm:block">Medicines</p>
-    </div>
-
-    <!-- Card 3 -->
-    <div
-      class="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 p-2 sm:p-3 border-l-4 border-blue-400 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer rounded-lg flex flex-col items-center justify-center">
-      <div
-        class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/20 backdrop-blur-sm shadow-[0_0_18px_rgba(255,255,255,0.25)] flex justify-center items-center mb-1 sm:mb-2">
-        <img src="./assest/Recordsanim.gif" alt="Medical records access"
-          class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 object-contain" />
-      </div>
-      <p class="text-[10px] sm:text-sm font-medium hidden sm:block">Records</p>
-    </div>
-
-    <!-- Card 4 -->
-    <div
-      class="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 p-2 sm:p-3 border-l-4 border-blue-400 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer rounded-lg flex flex-col items-center justify-center">
-      <div
-        class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/20 backdrop-blur-sm shadow-[0_0_18px_rgba(255,255,255,0.25)] flex justify-center items-center mb-1 sm:mb-2">
-        <img src="./assest/booktestanim.gif" alt="Book lab test"
-          class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 object-contain" />
-      </div>
-      <p class="text-[10px] sm:text-sm font-medium hidden sm:block">Book Test</p>
-    </div>
-  </div>
-</div>
-</section>
-
-
-
-
-
-<section class="bg-gradient-to-r from-blue-50 to-blue-100 py-16 px-4 md:px-10 lg:px-20">
-  <div class="text-center mb-12">
-    <h2 class="text-4xl font-bold text-gray-800">Featured Clinics & Hospitals</h2>
-    <p class="text-gray-600 mt-3">Top-rated healthcare providers trusted by thousands of patients</p>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-    <!-- Clinic Card 1 -->
-    <div class="relative rounded-2xl shadow-xl overflow-hidden bg-white">
-      <img src="./assest/smile-bright-dental-clinic.avif" alt="SmileBright Dental Clinic" class="w-full h-52 object-cover" />
-      <div class="p-5 space-y-2">
-        <div class="flex items-center justify-between">
-          <h3 class="text-xl font-semibold text-gray-800">SmileBright Dental Clinic</h3>
-          <span class="text-sm bg-blue-800 text-white px-2 py-0.5 rounded-full shadow">⭐ 4.9 / 5</span>
-        </div>
-        <p class="text-sm text-gray-600">📍 Patna, Bihar</p>
-        <p class="text-sm text-gray-700">🦷 Dental · Cosmetic Dentistry</p>
-        <p class="text-sm font-semibold text-green-500">🟢 Available Today</p>
-        <div class="flex flex-wrap gap-2 text-xs mt-2">
-          <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">Braces</span>
-          <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">Teeth Whitening</span>
-        </div>
-        <p class="italic text-sm text-gray-500 mt-2">“Gentle care. Bright smiles.”</p>
-        <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition">Book Now</button>
-      </div>
-    </div>
-
-    <!-- Clinic Card 2 -->
-    <div class="relative rounded-2xl shadow-xl overflow-hidden bg-white">
-      <img src="./assest/Healing Touch Multispeciality Hospital.webp" alt="Healing Touch Multispeciality" class="w-full h-52 object-cover" />
-      <div class="p-5 space-y-2">
-        <div class="flex items-center justify-between">
-          <h3 class="text-xl font-semibold text-gray-800">Healing Touch Multispeciality</h3>
-          <span class="text-sm bg-blue-800 text-white px-2 py-0.5 rounded-full shadow">⭐ 4.7 / 5</span>
-        </div>
-        <p class="text-sm text-gray-600">📍 Muzaffarpur</p>
-        <p class="text-sm text-gray-700">🏥 General · ENT · Pediatrics</p>
-        <p class="text-sm font-semibold text-green-500">🟢 Walk-ins Welcome</p>
-        <div class="flex flex-wrap gap-2 text-xs mt-2">
-          <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">ENT</span>
-          <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">Child Care</span>
-        </div>
-        <p class="italic text-sm text-gray-500 mt-2">“Compassionate care for every patient.”</p>
-        <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition">View Details</button>
-      </div>
-    </div>
-
-    <!-- Clinic Card 3 -->
-    <div class="relative rounded-2xl shadow-xl overflow-hidden bg-white">
-      <img src="./assest/CityCare Clinic.jpeg" alt="CityCare Clinic" class="w-full h-52 object-cover" />
-      <div class="p-5 space-y-2">
-        <div class="flex items-center justify-between">
-          <h3 class="text-xl font-semibold text-gray-800">CityCare Clinic</h3>
-          <span class="text-sm bg-blue-800 text-white px-2 py-0.5 rounded-full shadow">⭐ 4.8 / 5</span>
-        </div>
-        <p class="text-sm text-gray-600">📍 Gaya</p>
-        <p class="text-sm text-gray-700">🫀 Cardiology · General Checkups</p>
-        <p class="text-sm font-semibold text-green-500">🟢 Appointments Available</p>
-        <div class="flex flex-wrap gap-2 text-xs mt-2">
-          <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">Heart Check</span>
-          <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">Full Body</span>
-        </div>
-        <p class="italic text-sm text-gray-500 mt-2">“Your health, our priority.”</p>
-        <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition">Book Appointment</button>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-
-  <!-- Testimonials / Trust Indicators Section -->
-  <section class="bg-gradient-to-b from-blue-50 to-white py-16 px-4 md:px-10 lg:px-20">
-    <!-- Heading -->
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold text-gray-800">Stats</h2>
-      <p class="text-gray-600 mt-2">Real experiences from people who trusted us with their care</p>
-    </div>
-
-    <!-- Testimonials Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-      <!-- Testimonial Card 1 -->
-      <div
-        class="bg-white rounded-2xl shadow-lg p-6 border border-blue-100 hover:shadow-xl transition-all duration-500 border-l-4 border-blue-400">
-        <div class="flex items-center mb-4 space-x-4">
-          <img src="https://i.pravatar.cc/100?img=32" alt="Patient"
-            class="w-14 h-14 rounded-full border-2 border-blue-300">
-          <div>
-            <h4 class="font-semibold text-gray-800">Anjali S.</h4>
-            <p class="text-sm text-gray-500">Patna</p>
-          </div>
-        </div>
-        <p class="text-gray-700 italic mb-3">“The doctors were very kind and professional. I got my braces here and the
-          results are amazing!”</p>
-        <div class="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</div>
-        <p class="text-xs text-gray-400 mt-2">Visited SmileBright Dental</p>
-      </div>
-
-      <!-- Testimonial Card 2 -->
-      <div
-        class="bg-white rounded-2xl shadow-lg p-6 border border-blue-100 hover:shadow-xl transition-all duration-500 border-l-4 border-blue-400">
-        <div class="flex items-center mb-4 space-x-4">
-          <img src="https://i.pravatar.cc/100?img=12" alt="Patient"
-            class="w-14 h-14 rounded-full border-2 border-blue-300">
-          <div>
-            <h4 class="font-semibold text-gray-800">Ravi K.</h4>
-            <p class="text-sm text-gray-500">Muzaffarpur</p>
-          </div>
-        </div>
-        <p class="text-gray-700 italic mb-3">“I had a great experience with Healing Touch. Their pediatric care is
-          excellent and staff is cooperative.”</p>
-        <div class="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</div>
-        <p class="text-xs text-gray-400 mt-2">Visited Healing Touch Hospital</p>
-      </div>
-
-      <!-- Testimonial Card 3 -->
-      <div
-        class="bg-white rounded-2xl shadow-lg p-6 border border-blue-100 hover:shadow-xl transition-all duration-500 border-l-4 border-blue-400">
-        <div class="flex items-center mb-4 space-x-4">
-          <img src="https://i.pravatar.cc/100?img=47" alt="Patient"
-            class="w-14 h-14 rounded-full border-2 border-blue-300">
-          <div>
-            <h4 class="font-semibold text-gray-800">Priya M.</h4>
-            <p class="text-sm text-gray-500">Gaya</p>
-          </div>
-        </div>
-        <p class="text-gray-700 italic mb-3">“CityCare Clinic helped me recover fast from my surgery. Super clean and
-          professional!”</p>
-        <div class="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</div>
-        <p class="text-xs text-gray-400 mt-2">Visited CityCare Clinic</p>
-      </div>
-    </div>
-
-    <!-- Trust Indicators -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-blue-900">
-      <div class="bg-white rounded-xl shadow border border-blue-100 py-6 px-4">
-        <p class="text-2xl font-bold">10+</p>
-        <p class="text-sm mt-1">Clinics across Bihar</p>
-      </div>
-      <div class="bg-white rounded-xl shadow border border-blue-100 py-6 px-4">
-        <p class="text-2xl font-bold">50,000+</p>
-        <p class="text-sm mt-1">Happy Patients</p>
-      </div>
-      <div class="bg-white rounded-xl shadow border border-blue-100 py-6 px-4">
-        <p class="text-2xl font-bold">24/7</p>
-        <p class="text-sm mt-1">Booking Available</p>
-      </div>
-      <div class="bg-white rounded-xl shadow border border-blue-100 py-6 px-4">
-        <p class="text-2xl font-bold">100+</p>
-        <p class="text-sm mt-1">Certified Doctors</p>
-      </div>
-    </div>
-</section>
-
-
-<!-- Top Articles Section -->
-<a href="#" class="block py-20 bg-gradient-to-b from-blue-50 via-white to-blue-50 relative overflow-hidden">
-  <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center mb-14 text-gray-800 drop-shadow-sm">
-      Read top articles from health experts
-    </h2>
-    
-    <!-- Arrow Left -->
-    <button
-      class="absolute left-[calc(3%+30px)] top-1/2 transform -translate-y-1/2 bg-blue-100 text-blue-600 hover:bg-blue-200 transition rounded-full shadow-lg p-2 z-10 border">
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-      </svg>
-    </button>
-    
-    <!-- Cards Section -->
-    <div class="flex gap-6 overflow-x-auto px-10 scrollbar-hide">
-      <!-- Card 1 -->
-      <div
-        class="min-w-[280px] max-w-xs bg-blue-50 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition rounded-xl relative group shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_10px_28px_rgba(37,99,235,0.45)] duration-300">
-        <img class="w-full h-40 object-cover rounded-t-xl" src="./assest/imunity-food.jpg" alt="Immunity Foods" />
-        <div class="p-4 space-y-1">
-          <h3 class="text-base font-semibold text-gray-800">5 Foods That Boost Immunity</h3>
-          <p class="text-sm text-blue-800 font-medium">Ms. Swati Kapoor, Dietitian/Nutritionist</p>
-          <p class="text-xs flex items-center gap-2">
-            <span class="text-red-600 flex items-center gap-1">❤️ 750 Likes</span> •
-            <span class="text-red-500 flex items-center gap-1">👁️ 104336 Views</span>
-          </p>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div
-        class="min-w-[280px] max-w-xs bg-blue-50 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition rounded-xl relative group shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_10px_28px_rgba(37,99,235,0.45)] duration-300">
-        <img class="w-full h-40 object-cover rounded-t-xl"
-          src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=600&q=80"
-          alt="Belly Fat Tips" />
-        <div class="p-4 space-y-1">
-          <h3 class="text-base font-semibold text-gray-800">16 Lifestyle Tips to Get Rid of Belly Fat
-          </h3>
-          <p class="text-sm text-blue-800 font-medium">Dr. Sachin Goel</p>
-          <p class="text-xs flex items-center gap-2">
-            <span class="text-red-600 flex items-center gap-1">❤️ 488 Likes</span> •
-            <span class="text-red-500 flex items-center gap-1">👁️ 116876 Views</span>
-          </p>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div
-        class="min-w-[280px] max-w-xs bg-blue-50 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition rounded-xl relative group shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_10px_28px_rgba(37,99,235,0.45)] duration-300">
-        <img class="w-full h-40 object-cover rounded-t-xl" src="./assest/ghee-benefit.jpg" alt="Ghee Benefits" />
-        <div class="p-4 space-y-1">
-          <h3 class="text-base font-semibold text-gray-800">"Ghar Ka Ghee" Your Heart-Mate!</h3>
-          <p class="text-sm text-blue-800 font-medium">Dr. Avinash Vilas Wankhede</p>
-          <p class="text-xs flex items-center gap-2">
-            <span class="text-red-600 flex items-center gap-1">❤️ 298 Likes</span> •
-            <span class="text-red-500 flex items-center gap-1">👁️ 62139 Views</span>
-          </p>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div
-        class="min-w-[280px] max-w-xs bg-blue-50 border border-blue-200 hover:border-blue-400 hover:bg-blue-100 transition rounded-xl relative group shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_10px_28px_rgba(37,99,235,0.45)] duration-300">
-        <img class="w-full h-40 object-cover rounded-t-xl" src="./assest/How to Naturally Stay Energetic Daily.jpeg"
-          alt="Stay Energetic" />
-        <div class="p-4 space-y-1">
-          <h3 class="text-base font-semibold text-gray-800">How to Naturally Stay Energetic Daily</h3>
-          <p class="text-sm text-blue-800 font-medium">Dr. Anita Sharma</p>
-          <p class="text-xs flex items-center gap-2">
-            <span class="text-red-600 flex items-center gap-1">❤️ 412 Likes</span> •
-            <span class="text-red-500 flex items-center gap-1">👁️ 90234 Views</span>
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Arrow Right -->
-    <button
-      class="absolute right-[calc(3%+30px)] top-1/2 transform -translate-y-1/2 bg-blue-100 text-blue-600 hover:bg-blue-200 transition rounded-full shadow-lg p-2 z-10 border">
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-      </svg>
-    </button>
-  </div>
-</a>
+  </a>
 
   <!-- Call to Action Section -->
   <section class="bg-gradient-to-br from-blue-200 via-blue-100 to-white text-black py-20 px-4 mb-16">
@@ -580,7 +602,7 @@ style="background-image: url('./assest/your-bg.jpg');">
 
 
   <!-- Footer -->
-  <footer class="bg-blue-800 text-blue-100 py-12">
+  <footer class="bg-gradient-to-br from-[#050505] via-[#0c1a2e] to-[#08112E] text-blue-100 py-12">
     <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
       <div>
         <h2 class="font-bold text-xl mb-4">Kalope Dental</h2>
